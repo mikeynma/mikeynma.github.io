@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Games for the ZX Spectrum Next</title>
-<meta name="description" content="Free games for the ZX Spectrum Next, written from scratch in Z80 assembly: a wizard battle, a roguelike and a party RPG on the way.">
+<meta name="description" content="Free games for the ZX Spectrum Next, written from scratch in Z80 assembly: a wizard battle, a roguelike, a party RPG and a robot-takeover game on the way.">
 <meta property="og:title" content="Games for the ZX Spectrum Next">
 <meta property="og:description" content="Free games for the ZX Spectrum Next, written from scratch in Z80 assembly.">
 <meta property="og:image" content="https://mikeynma.github.io/affairs-of-wizards/shots/title-card.png">
@@ -36,11 +36,13 @@ header { padding: 64px 0 32px; }
 .eyebrow { font: 600 0.75rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); margin: 0 0 12px; }
 h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -0.03em; margin: 0 0 12px; }
 .lead { color: var(--muted); font-size: 1.15rem; max-width: 46rem; margin: 0; }
-.games { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding-bottom: 48px; }
+.games { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; padding-bottom: 48px; }
 .game { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
 .game:hover { border-color: #3f3f46; transform: translateY(-2px); }
+.shot.fit { object-fit: contain; }
 .shot { aspect-ratio: 5 / 4; width: 100%; object-fit: cover; image-rendering: pixelated; background: #000; display: block; }
 .body { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px 20px; flex: 1; }
+.logo { height: 40px; width: auto; max-width: 100%; object-fit: contain; object-position: left; image-rendering: pixelated; }
 .game h2 { font-size: 1.1rem; margin: 0; letter-spacing: -0.01em; }
 .game p { color: var(--muted); margin: 0; }
 .meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: auto; padding-top: 6px; }
@@ -53,7 +55,7 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -0.03e
 .how p:last-child { margin: 0; }
 code { font: 0.85em var(--mono); background: #18181b; border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
 footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; padding: 24px 0 40px; }
-@media (max-width: 520px) { header { padding-top: 40px; } .games { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { header { padding-top: 40px; } .games { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -68,6 +70,7 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.
     <a class="game" href="affairs-of-wizards/">
       <img class="shot" src="affairs-of-wizards/shots/title-card.png" width="640" height="512" alt="The Affairs of Wizards: the title over a starfield arena of wizards and their creatures">
       <div class="body">
+        <img class="logo" src="affairs-of-wizards/logo.svg" alt="">
         <h2>The Affairs of Wizards</h2>
         <p>Two to eight wizards, a book of spells each, and creatures that may not be real at all. Summon, bluff and be the last wizard standing.</p>
         <div class="meta"><span class="badge free">Free download</span><span class="go">See the game &rarr;</span></div>
@@ -77,6 +80,7 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.
     <a class="game" href="down-and-back-again/">
       <img class="shot" src="down-and-back-again/shots/hero.png" width="640" height="512" alt="Down and Back Again: a dungeon level with the hero and monsters">
       <div class="body">
+        <img class="logo" src="down-and-back-again/logo.svg" alt="">
         <h2>Down and Back Again</h2>
         <p>Go down. Grab the Sunstone. Get back! A roguelike: deep into the dungeon for the treasure, then the long climb home.</p>
         <div class="meta"><span class="badge free">Free download</span><span class="go">See the game &rarr;</span></div>
@@ -84,10 +88,20 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.
     </a>
 
     <a class="game" href="the-unsung/">
-      <img class="shot" src="the-unsung/shots/street.png" alt="The Unsung: a street in Mardle-on-Wend, seen through the party's eyes">
+      <img class="shot fit" src="the-unsung/share.jpg" alt="The Unsung: the title over a stone corridor, coming soon to the ZX Spectrum Next">
       <div class="body">
+        <img class="logo" src="the-unsung/logo.webp" alt="">
         <h2>The Unsung</h2>
         <p>Someone is stealing the songs of Mardle-on-Wend. A first-person party RPG with a bard at its head.</p>
+        <div class="meta"><span class="badge">Coming soon</span><span class="go">See the plans &rarr;</span></div>
+      </div>
+    </a>
+    <a class="game" href="quazadroid/">
+      <img class="shot" src="quazadroid/shots/title.png" width="640" height="512" alt="Quazadroid: the chrome title over a steel space-station deck and its robots">
+      <div class="body">
+        <img class="logo" src="quazadroid/logo-hub.png" alt="">
+        <h2>Quazadroid</h2>
+        <p>A runaway space station, its robots gone rogue. You're a tiny repair drone: rewire a robot's circuits to take it over, then fight your way down to the reactor.</p>
         <div class="meta"><span class="badge">Coming soon</span><span class="go">See the plans &rarr;</span></div>
       </div>
     </a>
