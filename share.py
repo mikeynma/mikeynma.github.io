@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 """Draw share.png, the 1200x630 picture links to the hub show (og:image).
-Four games' pictures in a 2x2 grid, from their repos in ~/www. Rerun after
+The games' pictures, three above and two below, from their repos in ~/www. Rerun after
 changing which games the card shows, and look at the result."""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 HERE = Path(__file__).parent
 WWW = HERE.parent
-GAMES = [  # 640x512 shots, drawn at half size
+GAMES = [  # 640x512 shots, drawn at a third: three above, two below
     WWW / "chaos/site/shots/title-card.png",
     WWW / "next-rogue/site/shots/hero.png",
-    "unsung",
     WWW / "quazadroid/site/shots/title.png",
+    "unsung",
+    WWW / "stargosy/site/shots/title-card.png",
 ]
 
 
@@ -36,14 +37,18 @@ def unsung():  # its shots are 352x288 with no title: a corridor with its logo o
 W, H = 1200, 630
 img = Image.new("RGB", (W, H), "#09090b")
 d = ImageDraw.Draw(img)
-gx, gy, gap = W - 48 - 656, (H - 528) // 2, 16
-corner = Image.new("L", (320, 256), 0)
-ImageDraw.Draw(corner).rounded_rectangle((0, 0, 319, 255), 10, fill=255)
+CW, CH, gap = 210, 168, 14
+gx, gy = W - 40 - (3 * CW + 2 * gap), (H - (2 * CH + gap)) // 2
+corner = Image.new("L", (CW, CH), 0)
+ImageDraw.Draw(corner).rounded_rectangle((0, 0, CW - 1, CH - 1), 8, fill=255)
 for i, g in enumerate(GAMES):
-    shot = unsung() if g == "unsung" else Image.open(g).convert("RGB").resize((320, 256), Image.NEAREST)
-    x, y = gx + (i % 2) * (320 + gap), gy + (i // 2) * (256 + gap)
+    shot = unsung() if g == "unsung" else Image.open(g).convert("RGB")
+    shot = shot.resize((CW, CH), Image.LANCZOS)
+    row, col = divmod(i, 3)
+    x = gx + col * (CW + gap) + (row * (CW + gap) // 2)   # (the two below sit between the three above)
+    y = gy + row * (CH + gap)
     img.paste(shot, (x, y), corner)
-    d.rounded_rectangle((x - 1, y - 1, x + 320, y + 256), 11, outline="#27272a")
+    d.rounded_rectangle((x - 1, y - 1, x + CW, y + CH), 9, outline="#27272a")
 
 x = 56
 d.text((x, 160), "FREE  ·  ZX SPECTRUM NEXT", font=mono(17), fill="#c4b5fd")
