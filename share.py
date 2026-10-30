@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Draw share.png, the 1200x630 picture links to the hub show (og:image).
-The games' pictures, three above and two below, from their repos in ~/www. Rerun after
+The games' pictures, three above and two below, from their repos in ~/www/next-games. Rerun after
 changing which games the card shows, and look at the result."""
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
@@ -8,8 +8,8 @@ from PIL import Image, ImageDraw, ImageFont
 HERE = Path(__file__).parent
 WWW = HERE.parent
 GAMES = [  # 640x512 shots, drawn at a third: three above, two below
-    WWW / "chaos/site/shots/title-card.png",
-    WWW / "next-rogue/site/shots/hero.png",
+    WWW / "affairs-of-wizards/site/shots/title-card.png",
+    WWW / "down-and-back-again/site/shots/hero.png",
     WWW / "quazadroid/site/shots/title.png",
     "unsung",
     WWW / "stargosy/site/shots/title-card.png",
