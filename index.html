@@ -46,7 +46,6 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -0.03e
 .games { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; padding-bottom: 48px; }
 .game { display: flex; flex-direction: column; background: var(--card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: border-color 0.15s, transform 0.15s; }
 .game:hover { border-color: #3f3f46; transform: translateY(-2px); }
-.shot.fit { object-fit: contain; }
 .shot { aspect-ratio: 5 / 4; width: 100%; object-fit: cover; image-rendering: pixelated; background: #000; display: block; }
 .body { display: flex; flex-direction: column; gap: 10px; padding: 18px 20px 20px; flex: 1; }
 .logo { height: 40px; width: auto; max-width: 100%; object-fit: contain; object-position: left; image-rendering: pixelated; }
@@ -104,7 +103,7 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.
       </div>
     </a>
     <a class="game" href="the-unsung/">
-      <img class="shot fit" src="the-unsung/share.jpg" alt="The Unsung: the title over a stone corridor, coming soon to the ZX Spectrum Next">
+      <img class="shot" src="the-unsung/shots/street.png" width="352" height="288" alt="The Unsung: a cobbled street between timbered houses in Mardle-on-Wend">
       <div class="body">
         <img class="logo" src="the-unsung/logo.webp" alt="">
         <h2>The Unsung</h2>
@@ -122,7 +121,7 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.
       </div>
     </a>
     <a class="game" href="hex-appeal/">
-      <img class="shot fit" src="hex-appeal/share.jpg" alt="Hex Appeal: a frog in an apprentice's hat before a crooked tower under a red sun, coming soon to the ZX Spectrum Next">
+      <img class="shot" src="hex-appeal/shots/title.png" width="640" height="512" alt="Hex Appeal: the title, a frog in an apprentice's hat before a crooked tower under a red sun">
       <div class="body">
         <img class="logo" src="hex-appeal/logo-hub.png" alt="">
         <h2>Hex Appeal</h2>
