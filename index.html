@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Games for the ZX Spectrum Next</title>
-<meta name="description" content="Free games for the ZX Spectrum Next, written from scratch in Z80 assembly: a wizard battle, a roguelike, a robot-takeover game, and a party RPG and a space trader on the way.">
-<meta property="og:title" content="Games for the ZX Spectrum Next">
-<meta property="og:description" content="Free games for the ZX Spectrum Next, written from scratch in Z80 assembly.">
+<title>Games for the ZX Spectrum Next and the original Spectrum</title>
+<meta name="description" content="Free games and demos for the ZX Spectrum Next and the original 48K and 128K Spectrum, written from scratch in Z80 assembly: a wizard battle, a roguelike, a robot-takeover game, a party RPG, a rock shooter, and a space trader on the way.">
+<meta property="og:title" content="Games for the ZX Spectrum Next and the original Spectrum">
+<meta property="og:description" content="Free games and demos for the ZX Spectrum Next and the original Spectrum, written from scratch in Z80 assembly.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://mikeynma.github.io/">
 <meta property="og:image" content="https://mikeynma.github.io/share.png">
@@ -55,10 +55,16 @@ h1 { font-size: clamp(2rem, 5vw, 3rem); line-height: 1.1; letter-spacing: -0.03e
 .badge { display: inline-block; padding: 2px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 0.75rem; font-weight: 600; color: var(--muted); }
 .badge.free { color: var(--primary); border-color: #4c1d95; }
 .go { font-weight: 600; font-size: 0.9rem; color: var(--primary); }
-header.also { padding: 0 0 20px; }
-.also h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.jump a { padding: 6px 14px; border: 1px solid var(--border); border-radius: 999px; font-size: 0.9rem; font-weight: 600; text-decoration: none; color: var(--fg); background: var(--card); }
+.jump a:hover { border-color: var(--primary); color: var(--primary); }
+header.machine { padding: 24px 0 4px; border-top: 1px solid var(--border); }
+.machine h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
 .how { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin-bottom: 48px; }
 .how h2 { font-size: 1.1rem; margin: 0 0 8px; }
+.how h3 { font-size: 1rem; margin: 16px 0 4px; }
+h3.kind { font: 600 0.8rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 20px 0 14px; scroll-margin-top: 16px; }
+.tags { font: 600 0.7rem/1 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin: 0; }
 .how p { color: var(--muted); margin: 0 0 8px; }
 .how p:last-child { margin: 0; }
 code { font: 0.85em var(--mono); background: #18181b; border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; }
@@ -68,114 +74,143 @@ footer { border-top: 1px solid var(--border); color: var(--muted); font-size: 0.
 </head>
 <body>
 <main class="wrap">
-  <header>
-    <p class="eyebrow">ZX Spectrum Next</p>
-    <h1>Games for the Next</h1>
-    <p class="lead">Free games for the ZX Spectrum Next, written from scratch in Z80 assembly and played around the family table. Pick one to see more and download it.</p>
-  </header>
-
-  <section class="games" aria-label="The games">
-    <a class="game" href="affairs-of-wizards/">
+<header>
+<p class="eyebrow">ZX Spectrum Next &middot; ZX Spectrum 48K and 128K</p>
+<h1>Games for the Spectrum</h1>
+<p class="lead">Free games and demos for the ZX Spectrum Next and the original 48K and 128K Spectrum, written from scratch in Z80 assembly and played around the family table. Pick one to see more and download it.</p>
+<nav class="jump" aria-label="On this page"><a href="#next-games">Next games</a><a href="#next-demos">Next demos</a><a href="#spectrum-games">Spectrum games</a><a href="#spectrum-demos">Spectrum demos</a><a href="#how">How to play</a></nav>
+</header>
+<header class="machine">
+<p class="eyebrow">ZX Spectrum Next</p>
+<h2>For the Next</h2>
+</header>
+<h3 class="kind" id="next-games">Games</h3>
+<section class="games" aria-label="Games for the Next">
+<a class="game" href="affairs-of-wizards/">
       <img class="shot" src="affairs-of-wizards/shots/title-card.png" width="640" height="512" alt="The Affairs of Wizards: the title over a starfield arena of wizards and their creatures">
       <div class="body">
         <img class="logo" src="affairs-of-wizards/logo.svg" alt="">
+<p class="tags">Next &middot; Game</p>
         <h2>The Affairs of Wizards</h2>
         <p>Two to eight wizards, a book of spells each, and creatures that may not be real at all. Summon, bluff and be the last wizard standing.</p>
         <div class="meta"><span class="badge free">Free download</span><span class="go">See the game &rarr;</span></div>
       </div>
     </a>
-
-    <a class="game" href="down-and-back-again/">
+<a class="game" href="down-and-back-again/">
       <img class="shot" src="down-and-back-again/shots/hero.png" width="640" height="512" alt="Down and Back Again: a dungeon level with the hero and monsters">
       <div class="body">
         <img class="logo" src="down-and-back-again/logo.svg" alt="">
+<p class="tags">Next &middot; Game</p>
         <h2>Down and Back Again</h2>
         <p>Go down. Grab the Sunstone. Get back! A roguelike: deep into the dungeon for the treasure, then the long climb home.</p>
         <div class="meta"><span class="badge free">Free download</span><span class="go">See the game &rarr;</span></div>
       </div>
     </a>
-
-    <a class="game" href="hex-appeal/">
+<a class="game" href="hex-appeal/">
       <img class="shot" src="hex-appeal/shots/title.png" width="640" height="512" alt="Hex Appeal: the title, a frog in an apprentice's hat before a crooked tower under a red sun">
       <div class="body">
         <img class="logo" src="hex-appeal/logo-hub.png" alt="">
+<p class="tags">Next &middot; Game</p>
         <h2>Hex Appeal</h2>
         <p>An apprentice brewed a potion to make himself irresistible and got one word wrong. Now he's a frog at the bottom of a very old, very dark dungeon, and the only way out is up.</p>
         <div class="meta"><span class="badge free">Free test build</span><span class="go">See the game &rarr;</span></div>
       </div>
     </a>
-
-    <a class="game" href="quazadroid/">
+<a class="game" href="quazadroid/">
       <img class="shot" src="quazadroid/shots/title.png" width="640" height="512" alt="Quazadroid: the chrome title over the station, a gas giant and the stars">
       <div class="body">
         <img class="logo" src="quazadroid/logo-hub.png" alt="">
+<p class="tags">Next &middot; Game</p>
         <h2>Quazadroid</h2>
         <p>A runaway space station, its robots gone rogue. You're a tiny repair drone: rewire a robot's circuits to take it over, then fight your way down to the reactor.</p>
         <div class="meta"><span class="badge free">Free test build</span><span class="go">See the game &rarr;</span></div>
       </div>
     </a>
-    <a class="game" href="the-unsung/">
+<a class="game" href="the-unsung/">
       <img class="shot" src="the-unsung/shots/title-card.png" width="640" height="512" alt="The Unsung: the gilded title over a cobbled street, for the ZX Spectrum Next">
       <div class="body">
         <img class="logo" src="the-unsung/logo.webp" alt="">
+<p class="tags">Next &middot; Game</p>
         <h2>The Unsung</h2>
         <p>Someone is stealing the songs of Mardle-on-Wend. A first-person party RPG with a bard at its head: five acts, three endings. Version 1.0 is out.</p>
         <div class="meta"><span class="badge free">Free download</span><span class="go">See the game &rarr;</span></div>
       </div>
     </a>
-    <a class="game" href="stargosy/">
+<a class="game" href="stargosy/">
       <img class="shot" src="stargosy/shots/title-card.png" width="640" height="512" alt="Stargosy: brass letters over a space station, ships and a red planet, a space trader for the ZX Spectrum Next">
       <div class="body">
         <img class="logo" src="stargosy/logo-hub.png" alt="">
+<p class="tags">Next &middot; Game</p>
         <h2>Stargosy</h2>
         <p>One small ship, a galaxy of 256 stars, and a living to make. Fly, fight, dock and trade in solid, shaded 3D.</p>
         <div class="meta"><span class="badge">Coming soon</span><span class="go">See the plans &rarr;</span></div>
       </div>
     </a>
-    <a class="game" href="next-sound-lab/">
+</section>
+<h3 class="kind" id="next-demos">Demos and labs</h3>
+<section class="games" aria-label="Demos for the Next">
+<a class="game" href="next-sound-lab/">
       <img class="shot" src="next-sound-lab/shots/climax-logo.png" width="640" height="512" alt="Next Sound Lab: the chrome SOUNDS LAB logo over copper bars, with dozens of shiny bobs, an oscilloscope and a rainbow scroller">
       <div class="body">
         <img class="logo" src="next-sound-lab/logo-hub.png" style="height:38px" alt="">
+<p class="tags">Next &middot; Demo</p>
         <h2>Next Sound Lab</h2>
         <p>Sampled music on the Next: eight voices mixed in Z80N and played by the Copper, one byte a scan line, with the DMA on two more DACs. An 80-bar song of our own under a 90s-style demo of copper bars, a plasma and a tunnel. A recording to play, the demo to watch and download, and how it works.</p>
         <div class="meta"><span class="badge free">Demo, free</span><span class="go">Listen &rarr;</span></div>
       </div>
     </a>
-  </section>
-
-  <header class="also">
-    <p class="eyebrow">ZX Spectrum 48K and 128K</p>
-    <h2>Also: for the original Spectrum</h2>
-  </header>
-  <section class="games" aria-label="For the original Spectrum">
-    <a class="game" href="borders-and-loaders/">
+</section>
+<header class="machine">
+<p class="eyebrow">ZX Spectrum 48K and 128K</p>
+<h2>For the original Spectrum</h2>
+</header>
+<h3 class="kind" id="spectrum-games">Games</h3>
+<section class="games" aria-label="Games for the original Spectrum">
+<a class="game" href="shardstorm/">
+<img class="shot" src="shardstorm/shots/the-border/checkerboard.png" width="704" height="576" alt="Shardstorm: WAVE 2 in big yellow letters on a black playfield, a blue and cyan checkerboard filling the whole border">
+<div class="body">
+<img class="logo" src="shardstorm/logo-hub.png" style="height:38px" alt="">
+<p class="tags">48K &middot; 128K &middot; Game</p>
+<h2>Shardstorm</h2>
+<p>Turn, thrust and fire round a black playfield while the border does the showing off: a ticker, bars to the music, a set piece between waves, and a saucer that hunts you. Its tape lets you play a small Shardstorm while the game loads.</p>
+<div class="meta"><span class="badge free">Free download</span><span class="go">See the game &rarr;</span></div>
+</div>
+</a>
+</section>
+<h3 class="kind" id="spectrum-demos">Demos and labs</h3>
+<section class="games" aria-label="Demos for the original Spectrum">
+<a class="game" href="borders-and-loaders/">
       <img class="shot" src="borders-and-loaders/shots/shardstorm-pulse/loading.png" width="704" height="576" alt="Borders and Loaders: a loading screen with big blocky letters scrolling in the top border and a VU meter in the bottom border">
       <div class="body">
         <img class="logo" src="borders-and-loaders/logo-hub.png" style="height:38px" alt="">
+<p class="tags">48K &middot; 128K &middot; Demos</p>
         <h2>Borders &amp; Loaders</h2>
         <p>Border effects and custom tape loaders: music, scrolling text and a VU meter in the border while a game loads, rainbow bars and horizons off the edge of the TV. Tapes to load, and how each one works.</p>
         <div class="meta"><span class="badge free">Demos, free</span><span class="go">See the demos &rarr;</span></div>
       </div>
     </a>
-    <a class="game" href="spectrum-sound-lab/">
+<a class="game" href="spectrum-sound-lab/">
       <img class="shot" src="spectrum-sound-lab/shots/star-tip-2026/playing.png" width="704" height="576" alt="Spectrum Sound Lab: a Spectrum screen headed STAR TIP 2026, credits to Tim Follin, and a border of short coloured lines, one colour for each of six voices">
       <div class="body">
         <img class="logo" src="spectrum-sound-lab/logo-hub.png" style="height:38px" alt="">
+<p class="tags">48K &middot; 128K &middot; Demos</p>
         <h2>Spectrum Sound Lab</h2>
         <p>Music on the beeper and the AY: six voices at once from the 48K's one-bit speaker, with envelopes, echo and a chorused bass, and Tim Follin's 1987 tune arranged for it. Recordings to play, tapes to load, and how it works.</p>
         <div class="meta"><span class="badge free">Demos, free</span><span class="go">Listen &rarr;</span></div>
       </div>
     </a>
-  </section>
-
-  <section class="how">
-    <h2>How to play them</h2>
-    <p>Each game is a <code>.nex</code> file (Hex Appeal comes in a folder with the files it reads beside it: copy the whole folder). On a ZX Spectrum Next, copy it to your SD card, pick it in the Browser and press ENTER. On a computer, open it in the CSpect emulator.</p>
-    <p>They're free, and always will be.</p>
-  </section>
+</section>
+<section class="how" id="how">
+<h2>How to play them</h2>
+<h3>On the Next</h3>
+<p>Each game is a <code>.nex</code> file (Hex Appeal comes in a folder with the files it reads beside it: copy the whole folder). On a ZX Spectrum Next, copy it to your SD card, pick it in the Browser and press ENTER. On a computer, open it in the CSpect emulator.</p>
+<h3>On the original Spectrum</h3>
+<p>Each game and demo comes as tapes: <code>.tzx</code> and <code>.tap</code> files, a 48K one and a 128K one where they differ. Open them in an emulator such as ZX Spin, Fuse or Retro Virtual Machine, or play the <code>.tzx</code> into a real Spectrum from a TZX player. Many of them load with our own tape loaders, which need the tape played in real time: switch off instant and fast loading. Each page says which file is which.</p>
+<p>They're free, and always will be.</p>
+</section>
 </main>
 <footer>
-  <div class="wrap">Made in the UK for the ZX Spectrum Next.</div>
+<div class="wrap">Made in the UK for the ZX Spectrum Next and the original ZX Spectrum.</div>
 </footer>
 </body>
 </html>
